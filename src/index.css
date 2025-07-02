@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Print styles */
+@media print {
+  @page {
+    margin: 0.5in;
+    size: landscape;
+  }
+  
+  body {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .print\\:hidden {
+    display: none !important;
+  }
+  
+  /* Ensure colors print correctly */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Make sure the chart fits on one page */
+  .max-w-6xl {
+    max-width: none !important;
+  }
+  
+  /* Adjust table for print */
+  table {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
+  
+  th, td {
+    padding: 8px !important;
+  }
+  
+  /* Ensure rainbow and decorative elements print */
+  svg {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
